@@ -18,8 +18,7 @@ export default {
     }
   },
   methods: {
-    async get_post(event) {
-      event.preventDefault()
+    async get_post() {
       this.loading = true
       try {
         let data
@@ -46,7 +45,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex justify-center w-full mt-10 items-center gap-10">
+  <div v-if="title" class="flex justify-center w-full mt-10 items-center gap-10">
     <Transition name="slide-fade" mode="out-in">
       <TheCard v-if="!loading" :image="image" :title="title" :link="link" :text="text" :keywords="keywords" />
       <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -55,8 +54,8 @@ export default {
           d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
       </svg>
     </Transition>
-
   </div>
+
   <div class="fixed z-50 bottom-5 right-5 mt-5">
     <button @click="get_post"
       class="bg-purple-600 text-white hover:text-purple-700 flex hover:bg-purple-100 hover:ring-2 hover:ring-purple-500 px-5 py-3 rounded-2xl transition-all">
