@@ -1,5 +1,5 @@
 {
-    "IT": [
+    "Айти": [
         {
             "title": "Hacker News Newest",
             "url": "https://hnrss.org/newest"
@@ -9,7 +9,7 @@
             "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml"
         }
     ],
-    "Russia": [
+    "Либерахи": [
         {
             "title": "Meduza",
             "url": "https://meduza.io/rss/all"

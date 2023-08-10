@@ -20,6 +20,9 @@ class FeedAdapter:
         self.path.write_text(json.dumps(feed))
         self._feed = feed
 
+    def get_categories(self):
+        return list(self._feed.keys())
+
     def add_source(self, title, url, category="Other"):
         if category not in self._feed:
             self._feed[category] = []
