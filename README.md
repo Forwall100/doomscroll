@@ -1,6 +1,6 @@
 # Doomscroll
 
-<img src="https://github.com/Forwall100/doomscroll/assets/78537089/0ac0e15d-a186-4dd3-9dc2-41502a310ff5" alt="drawing" width="1000"/>
+<img src="https://github.com/Forwall100/doomscroll/assets/78537089/0ac0e15d-a186-4dd3-9dc2-41502a310ff5" alt="drawing" width="700"/>
 Это веб-приложение, которое агрегирует RSS-каналы по категориям и отображает случайные краткие содержания статей. 
 
 # Demo
