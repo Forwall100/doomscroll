@@ -40,8 +40,12 @@ class FeedAdapter:
         self.set_feed(self._feed)
         return deleted
 
-    def get_random_url(self):
+    def get_random_source(self):
         category = choice(list(self._feed.keys()))
         item = choice(self._feed[category])
-        return item['url']
+        return item['url'], item['title']
+
+    def get_random_source_by_category(self, category:str):
+        item = choice(self._feed[category])
+        return item['url'], item['title']
 

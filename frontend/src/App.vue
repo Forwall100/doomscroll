@@ -15,7 +15,9 @@ export default {
       keywords: ['huy', 'pidor'],
       loading: false,
       errorMessage: "",
-      categories: []
+      sourceName: "",
+      categories: [],
+      selected_category: "Все"
     }
   },
   methods: {
@@ -24,18 +26,25 @@ export default {
       try {
         let data
         console.log('start')
-        await axios
-          .get("http://127.0.0.1:8000/post")
-          .then(responce => (data = responce.data))
+        if (this.selected_category == "Все") {
+          await axios
+            .get("http://127.0.0.1:8000/post")
+            .then(responce => (data = responce.data))
+        } else {
+          await axios
+            .get("http://127.0.0.1:8000/post-by-category?category=" + this.selected_category)
+            .then(responce => (data = responce.data))
+        }
         this.image = data['image']
         this.title = data['title']
         this.text = data['summary']
         this.link = data['link']
         this.keywords = data['keywords']
+        this.sourceName = data['source_title']
         this.errorMessage = ''
       } catch (err) {
         this.loading = false
-        this.errorMessage = "Couldn't find the coin"
+        console.log('ERRROR:' + err)
       }
 
       this.loading = false
@@ -46,7 +55,7 @@ export default {
         .get("http://127.0.0.1:8000/get-categories")
         .then(responce => (data = responce.data))
       this.categories = data['categories']
-    }
+    },
   },
   mounted() {
     this.get_post()
@@ -59,13 +68,20 @@ export default {
 <template>
   <div class="flex justify-center mt-10 px-28">
     <div class="felx-col">
-      <h1 class="mb-10 font-bold text-xl">Категории:</h1>
-      <div class="hover:cursor-pointer hover:text-purple-700 mb-5">Все</div>
-      <div v-for="category in categories" class="hover:cursor-pointer hover:text-purple-700 mb-5">{{ category }}</div>
+      <div class="flex gap-5">
+        <img src="./assets/logo.svg" class="h-8 w-8" alt="">
+        <h1 class="mb-10 font-bold text-xl">Категории:</h1>
+      </div>
+      <div @click="selected_category = 'Все'" class="hover:cursor-pointer mb-5 transition-all"
+        :class="selected_category == 'Все' ? 'text-purple-700' : 'hover:text-purple-700'">Все</div>
+      <div v-for="category in categories" @click="selected_category = category"
+        class="hover:cursor-pointer mb-5 transition-all"
+        :class="category == selected_category ? 'text-purple-700' : 'hover:text-purple-700'">{{ category }}</div>
     </div>
     <div class="flex justify-center w-full items-center gap-10">
       <Transition name="slide-fade" mode="out-in">
-        <TheCard v-if="!loading" :image="image" :title="title" :link="link" :text="text" :keywords="keywords" />
+        <TheCard v-if="!loading" :image="image" :title="title" :link="link" :text="text" :keywords="keywords"
+          :source="sourceName" />
         <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
           stroke="currentColor" class="w-6 h-6 animate-spin">
           <path stroke-linecap="round" stroke-linejoin="round"

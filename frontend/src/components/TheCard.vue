@@ -6,7 +6,7 @@
         <img class="object-cover w-full h-52 rounded-2xl mt-5" :src="image" alt="">
         <div class="flex mt-5 flex-wrap">
             <div v-for="keyword in keywords.slice(-7)">
-                <div class="border border-purple-700 p-2 rounded-full mr-2">
+                <div class="border border-purple-700 p-2 rounded-full mb-2 mr-2">
                     {{ keyword }}
                 </div>
             </div>
@@ -26,6 +26,7 @@
                 Скормить GPT
             </button>
         </div>
+        <div class="mt-5 text-gray-400">Источник: {{ source }}</div>
     </div>
     <div class="flex" v-else>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -42,7 +43,7 @@
 <script>
 import axios from 'axios'
 export default {
-    props: ['image', 'title', 'text', 'link', 'keywords'],
+    props: ['image', 'title', 'text', 'link', 'keywords', 'source'],
     data() {
         return {
             loading: false,
@@ -67,7 +68,7 @@ export default {
                 this.errorMessage = ''
             } catch (err) {
                 this.loading = false
-                this.errorMessage = "Couldn't find the coin"
+                this.errorMessage = ""
             }
 
             this.loading = false

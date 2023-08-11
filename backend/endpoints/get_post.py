@@ -12,7 +12,7 @@ router = APIRouter()
 async def get_post():
     adapter = FeedAdapter(FEED_PATH)
     try:
-        source_url = adapter.get_random_url()
+        source_url, source_title = adapter.get_random_source()
 
         rss = feedparser.parse(source_url)
 
@@ -23,6 +23,8 @@ async def get_post():
         article.parse()
         article.nlp()
 
-        return {"title": article.title, "summary": article.summary, "keywords": article.keywords, "link": url, "image": article.top_image}
+        return {"source_title":source_title, "title": article.title, "summary": article.summary, "keywords": article.keywords, "link": url, "image": article.top_image}
     except ValueError as e:
         raise HTTPException(status_code=422, detail=str(e))
+# from dateutil.relativedelta import relativedelta
+# new_date = date - relativedelta(months=2)
