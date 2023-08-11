@@ -30,7 +30,7 @@ https://github.com/Forwall100/doomscroll/assets/78537089/53c6a698-85c3-4244-bd08
 ## 🚀 Запуск локально
 
 1. Клонировать репозиторий
-2. `cd frontend`
+2. `cd doomscroll/frontend`
 3. `npm i`
 4. Запустите фронтенд командой `npm run dev`
 5. `cd ../backend`
