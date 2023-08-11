@@ -30,7 +30,7 @@ https://github.com/Forwall100/doomscroll/assets/78537089/df62a6b6-8054-4cc5-9c52
 
 Доступ к GPT модели предоставлен проектом [gpt4free](https://github.com/xtekky/gpt4free) и библиотекой [g4f](https://pypi.org/project/g4f/)
 
-Для отображения контента во фронтенде используется [Vue.js](https://vuejs.org/).
+На фронтенде используется [Vue.js](https://vuejs.org/) и [Tailwind css](https://tailwindcss.com/).
 
 Источники RSS и категории настраиваются в файле `feed.json`.
 
