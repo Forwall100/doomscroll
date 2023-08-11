@@ -1,6 +1,10 @@
 # Doomscroll
+![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
+![](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-<img src="https://github.com/Forwall100/doomscroll/assets/78537089/0ac0e15d-a186-4dd3-9dc2-41502a310ff5" alt="drawing" width="700"/>
+<img src="https://imgur.com/7mcuVg3" alt="drawing" width="700"/>
 
 Это веб-приложение, которое агрегирует RSS-каналы по категориям и отображает случайные краткие содержания статей. 
 
