@@ -1,0 +1,5 @@
+fastapi==0.95.2
+g4f==0.0.1.4
+newspaper3k==0.2.8
+nltk==3.8.1
+uvicorn==0.22.0
