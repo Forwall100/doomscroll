@@ -4,9 +4,9 @@
 ![](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
 ![](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-<img src="https://i.imgur.com/7mcuVg3.png" alt="drawing" width="700"/>
-
 Это веб-приложение, которое агрегирует RSS-каналы по категориям и отображает случайные краткие содержания статей. 
+
+<img src="https://i.imgur.com/7mcuVg3.png" alt="drawing" width="700"/>
 
 ## 🎥 Demo
 
