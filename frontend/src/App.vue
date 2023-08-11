@@ -12,7 +12,7 @@ export default {
       title: '',
       link: false,
       text: null,
-      keywords: ['huy', 'pidor'],
+      keywords: [],
       loading: false,
       errorMessage: "",
       sourceName: "",
