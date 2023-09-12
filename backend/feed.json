@@ -7,6 +7,34 @@
         {
             "title": "Github Trending",
             "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml"
+        },
+        {
+            "title": "Habr научпоп",
+            "url": "https://habr.com/ru/rss/hubs/popular_science/articles/?fl=ru"
+        },
+        {
+            "title": "Habr Айти компании",
+            "url": "https://habr.com/ru/rss/hubs/itcompanies/articles/?fl=ru"
+        },
+        {
+            "title": "Habr Кибербез",
+            "url": "https://habr.com/ru/rss/hubs/infosecurity/articles/?fl=ru"
+        },
+        {
+            "title": "Habr AI",
+            "url": "https://habr.com/ru/rss/hubs/artificial_intelligence/articles/?fl=ru"
+        },
+        {
+            "title": "Habr Open source",
+            "url": "https://habr.com/ru/rss/hubs/open_source/articles/?fl=ru"
+        },
+        {
+            "title": "Habr Research",
+            "url": "https://habr.com/ru/rss/hubs/research/articles/?fl=ru"
+        },
+        {
+            "title": "VC ru",
+            "url": "https://vc.ru/rss"
         }
     ],
     "Либерахи": [

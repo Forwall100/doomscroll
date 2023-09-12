@@ -11,11 +11,11 @@ from g4f.Provider import DeepAi
 router = APIRouter()
 
 summarize_prompt = """
-Please provide a sammarie of the article below in the following format - 
-First, briefly summarize what the article is about and write the main point of the article
-Next, choose the top 5 points from the article and write them.
-The sammari should be divided into paragraphs and at the beginning of each paragraph there should be an emoji that fits the meaning.
-The received sammarie should be at least 1000 characters in size and should be submitted in Russian.
+Please, make this article into a post to the Telegram channel taking into account all my wishes: 
+First, summarize the essence of the article and write the main idea of the article.
+Next, choose a few most important points from the article and write them.
+The post should be divided into paragraphs, and at the beginning of each paragraph there should be an emoji corresponding to the meaning.
+The resulting post should be no more than 1500 characters in size and it should be written in Russian.
 Article:\n
 """
 

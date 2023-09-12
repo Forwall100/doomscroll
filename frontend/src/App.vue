@@ -56,6 +56,9 @@ export default {
         .then(responce => (data = responce.data))
       this.categories = data['categories']
     },
+    async selected_category() {
+      
+    }
   },
   mounted() {
     this.get_post()
